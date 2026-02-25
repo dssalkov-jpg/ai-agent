@@ -39,6 +39,22 @@
     --radius-md: 20px;
     --radius-lg: 24px;
 
+    /* Spacing scale (8px base) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-14: 56px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --space-30: 120px;
+
     /* Section spacing */
     --section-padding: 100px 32px;
     --section-padding-large: 120px 32px;
@@ -64,7 +80,7 @@ body {
 /* ===== SOCIAL PROOF ===== */
 .social-proof {
     text-align: center;
-    padding: 60px 32px 0 32px;
+    padding: var(--space-16) var(--space-8) 0 var(--space-8);
     position: relative;
     z-index: 1;
 }
@@ -90,13 +106,11 @@ body {
     position: relative;
     overflow: hidden;
     background: linear-gradient(180deg,
-        #1e40af 0%,
-        #2563eb 20%,
-        #3b82f6 40%,
-        #5b5fc7 60%,
-        #6366f1 75%,
-        #7c3aed 90%,
-        #8b5cf6 100%
+        #0a1929 0%,
+        #1e3a8a 25%,
+        #2563eb 50%,
+        #3b82f6 75%,
+        #0f172a 100%
     );
 }
 
@@ -136,7 +150,7 @@ body {
 
 .hero-header {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: var(--space-14);
 }
 
 .hero-header h1 {
@@ -144,7 +158,7 @@ body {
     font-size: 56px;
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-5);
     letter-spacing: -0.02em;
     color: white;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -162,7 +176,7 @@ body {
 .dashboard-showcase {
     display: grid;
     grid-template-columns: 380px 1fr 380px;
-    gap: 24px;
+    gap: var(--space-6);
     align-items: start;
 }
 
@@ -175,7 +189,7 @@ body {
 .product-card {
     background: white;
     border-radius: var(--radius-md);
-    padding: 20px;
+    padding: var(--space-5);
     box-shadow: var(--shadow-strong);
     position: relative;
     height: var(--card-height);
@@ -205,7 +219,7 @@ body {
     aspect-ratio: 1;
     border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-4);
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     display: flex;
     align-items: center;
@@ -222,7 +236,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 16px;
+    gap: var(--space-4);
 }
 
 .product-details {
@@ -266,7 +280,7 @@ body {
 .dashboard-center {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
 }
 
 .metrics-header {
@@ -298,7 +312,7 @@ body {
 .metrics-block-inner {
     background: white;
     border-radius: 16px;
-    padding: 24px 28px;
+    padding: var(--space-6) var(--space-8);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -308,7 +322,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
 }
 
 .metrics-row {
@@ -359,7 +373,7 @@ body {
 .dashboard-right {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
 }
 
 .chat-card {
@@ -420,6 +434,8 @@ body {
     margin-right: 20px;
     border-radius: 14px 14px 14px 4px;
     animation-delay: 1.5s;
+    white-space: pre-line;
+    padding: 14px 18px;
 }
 
 .typing-cursor {
@@ -459,14 +475,12 @@ body {
     margin-top: -40px;
     padding: 120px 32px 100px 32px;
     background: linear-gradient(180deg,
-        #6366f1 0%,
-        #5b5fc7 15%,
-        #4f46e5 25%,
-        #3b82f6 40%,
-        #2563eb 55%,
-        #1e40af 75%,
-        #1e3a8a 85%,
-        #0f172a 100%
+        #0f172a 0%,
+        #172033 20%,
+        #1e293b 40%,
+        #293548 60%,
+        #334155 80%,
+        #475569 100%
     );
     overflow: hidden;
 }
@@ -481,6 +495,18 @@ body {
     background:
         radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.advantages-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px);
     pointer-events: none;
 }
 
@@ -584,7 +610,7 @@ body {
 .card-header {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--space-4);
     margin-bottom: 20px;
 }
 
@@ -697,12 +723,13 @@ body {
     margin-top: -40px;
     padding: 120px 32px 100px 32px;
     background: linear-gradient(180deg,
-        #0f172a 0%,
-        #172033 20%,
-        #1e293b 40%,
-        #293548 60%,
-        #334155 80%,
-        #475569 100%
+        #475569 0%,
+        #3e4a5c 15%,
+        #334155 30%,
+        #293548 50%,
+        #1e293b 70%,
+        #172033 85%,
+        #0f172a 100%
     );
     overflow: hidden;
 }
@@ -873,7 +900,7 @@ body {
     font-weight: 700;
     color: white;
     line-height: 1.2;
-    margin-bottom: 12px;
+    margin-bottom: var(--space-3);
     text-align: center;
 }
 
@@ -888,7 +915,7 @@ body {
 .examples-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: var(--space-4);
     margin-bottom: 28px;
 }
 
@@ -1033,7 +1060,7 @@ body {
     backdrop-filter: blur(16px);
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--space-4);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease-out 0.8s forwards;
@@ -1075,13 +1102,13 @@ body {
     margin-top: -40px;
     padding: 120px 32px 100px 32px;
     background: linear-gradient(180deg,
-        #475569 0%,
-        #3e4a5c 20%,
-        #334155 40%,
-        #293548 60%,
-        #1e293b 75%,
-        #172033 88%,
-        #0f172a 100%
+        #0f172a 0%,
+        #172033 15%,
+        #1e293b 30%,
+        #293548 50%,
+        #334155 70%,
+        #3e4a5c 85%,
+        #475569 100%
     );
     position: relative;
     overflow: hidden;
@@ -1092,420 +1119,205 @@ body {
     margin: 0 auto;
 }
 
-.testimonial-card {
+/* ===== INTERACTIVE CTA CARD ===== */
+.interactive-cta-card {
     background: rgba(30, 41, 59, 0.5);
     backdrop-filter: blur(24px);
     border-radius: var(--radius-lg);
     padding: 48px;
     box-shadow: var(--shadow-strong);
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 56px;
-    align-items: center;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 48px;
+    align-items: stretch;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease-out 0.2s forwards;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.card-left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.chat-window {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-medium);
-}
-
-.chat-window::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
-}
-
-.agent-avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+/* Chat Placeholder (Left 40%) */
+.chat-placeholder {
+    background: rgba(15, 23, 42, 0.4);
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    padding: 40px;
+    min-height: 280px;
 }
 
-.agent-avatar svg {
-    width: 24px;
-    height: 24px;
-    stroke: white;
-    fill: none;
-    stroke-width: 2;
-}
-
-.agent-info {
-    flex: 1;
-}
-
-.agent-name {
-    font-family: 'Fraunces', serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 2px;
-}
-
-.agent-status {
-    font-size: 13px;
-    color: var(--accent-green);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.status-indicator {
-    width: 6px;
-    height: 6px;
-    background: var(--accent-green);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-.chat-conversation {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.message {
-    padding: 14px 18px;
-    border-radius: 14px;
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 82%;
-}
-
-.message.user {
-    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-    margin-left: auto;
-    border-radius: 14px 14px 2px 14px;
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.message.agent {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 14px 14px 14px 2px;
-}
-
-.agent-intro {
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-    font-size: 14px;
-}
-
-.findings-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 10px;
-}
-
-.finding-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px;
-    background: #fafafa;
-    border-radius: 8px;
-    border-left: 2px solid var(--accent-blue);
-}
-
-.finding-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    margin-top: 1px;
-}
-
-.finding-icon svg {
-    width: 100%;
-    height: 100%;
-    stroke: var(--accent-blue);
-    fill: none;
-    stroke-width: 2;
-}
-
-.finding-content {
-    flex: 1;
-}
-
-.finding-title {
-    font-weight: 600;
-    color: var(--text-primary);
-    font-size: 13px;
-    margin-bottom: 3px;
-}
-
-.finding-details {
-    font-size: 12px;
-    color: var(--text-secondary);
-}
-
-.agent-recommendation {
-    padding: 8px 10px;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.04) 100%);
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--accent-green);
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.recommendation-icon {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    margin-top: 1px;
-}
-
-.recommendation-icon svg {
-    width: 100%;
-    height: 100%;
-    stroke: var(--accent-green);
-    fill: none;
-    stroke-width: 2;
-}
-
-.preview-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-}
-
-.preview-item {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 10px 8px;
+.placeholder-content {
     text-align: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    opacity: 0.5;
 }
 
-.preview-item:hover {
-    border-color: var(--accent-blue);
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
-    transform: translateY(-2px);
+.placeholder-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    color: rgba(255, 255, 255, 0.4);
 }
 
-.preview-item.active {
-    border-color: var(--accent-blue);
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.04) 0%, rgba(59, 130, 246, 0.02) 100%);
-}
-
-.preview-icon {
-    width: 28px;
-    height: 28px;
-    margin: 0 auto 8px;
-}
-
-.preview-icon svg {
+.placeholder-icon svg {
     width: 100%;
     height: 100%;
-    stroke: var(--text-secondary);
-    fill: none;
-    stroke-width: 1.5;
 }
 
-.preview-item:hover .preview-icon svg,
-.preview-item.active .preview-icon svg {
-    stroke: var(--accent-blue);
+.placeholder-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    line-height: 1.5;
 }
 
-.preview-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-secondary);
-    line-height: 1.3;
-}
-
-.preview-item:hover .preview-label,
-.preview-item.active .preview-label {
-    color: var(--accent-blue);
-}
-
-.card-right {
+/* CTA Content (Right 60%) */
+.cta-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.author-avatar {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
-    border: 2px solid rgba(16, 185, 129, 0.2);
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-family: 'Fraunces', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--accent-green);
-    flex-shrink: 0;
+    gap: var(--space-5);
 }
 
-.author-details {
-    flex: 1;
-}
-
-.author-name {
+.cta-headline {
     font-family: 'Fraunces', serif;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
     color: white;
-    margin-bottom: 4px;
+    letter-spacing: -0.02em;
 }
 
-.author-meta {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+.cta-subheadline {
+    font-size: 17px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
+    margin-top: -8px;
 }
 
-.testimonial-quote {
-    font-family: 'Fraunces', serif;
-    font-size: 24px;
-    line-height: 1.4;
-    color: white;
+/* Example Analysis Showcase Container */
+.example-showcase {
+    background: rgba(16, 185, 129, 0.04);
+    border-left: 3px solid rgba(16, 185, 129, 0.3);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 16px 0 8px 0;
+}
+
+/* Example Analysis (expanded text) */
+.example-intro {
+    font-size: 17px;
     font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 10px 0;
+    line-height: 1.5;
     letter-spacing: -0.01em;
-    position: relative;
-    padding-left: 20px;
 }
 
-.testimonial-quote::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
-    border-radius: 2px;
+.example-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 8px 0;
 }
 
-.testimonial-details {
+.example-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.example-list li {
     font-size: 15px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.75);
-    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    padding-left: 20px;
+    position: relative;
 }
 
-.testimonial-metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+.example-list li::before {
+    content: '•';
+    position: absolute;
+    left: 6px;
+    color: var(--accent-green);
+    font-weight: 700;
+    font-size: 18px;
 }
 
-.metric {
+.example-insight {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Chat Pointer (Visual Indicator) */
+.chat-pointer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-top: 8px;
+    padding: 20px 24px;
+    background: rgba(16, 185, 129, 0.08);
+    border-left: 3px solid var(--accent-green);
+    border-radius: 8px;
+}
+
+.pointer-arrow {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-green);
+    line-height: 1;
+    animation: pointLeft 1.5s ease-in-out infinite;
+}
+
+@keyframes pointLeft {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-8px); }
+}
+
+.pointer-text {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
-.metric-value {
-    font-family: 'Fraunces', serif;
-    font-size: 42px;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--accent-green) 0%, #34d399 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.metric:nth-child(2) .metric-value {
-    background: linear-gradient(135deg, var(--accent-blue) 0%, #60a5fa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.metric-label {
-    font-size: 14px;
+.pointer-main {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.7);
+}
+
+.pointer-sub {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 500;
 }
 
-.testimonial-card .cta-button {
-    display: inline-flex;
+/* Footer Trust Signals */
+.cta-footer {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 16px 32px;
-    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
-    align-self: flex-start;
-    width: auto;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    margin-top: 4px;
 }
 
-.testimonial-card .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+.trust-badge {
+    color: rgba(255, 255, 255, 0.65);
 }
 
-.cta-arrow {
-    width: 18px;
-    height: 18px;
-    transition: transform 0.3s ease;
-}
-
-.cta-arrow svg {
-    width: 100%;
-    height: 100%;
-    stroke: white;
-    fill: none;
-    stroke-width: 2;
-}
-
-.testimonial-card .cta-button:hover .cta-arrow {
-    transform: translateX(3px);
+.trust-separator {
+    opacity: 0.4;
 }
 
 /* ===== FAQ SECTION ===== */
@@ -1513,11 +1325,12 @@ body {
     margin-top: -40px;
     padding: 120px 32px 100px 32px;
     background: linear-gradient(180deg,
-        #0f172a 0%,
-        #172033 25%,
-        #1e293b 50%,
-        #293548 75%,
-        #334155 100%
+        #475569 0%,
+        #3e4a5c 20%,
+        #334155 40%,
+        #293548 60%,
+        #1e293b 80%,
+        #0f172a 100%
     );
     position: relative;
     overflow: hidden;
@@ -1545,7 +1358,7 @@ body {
 
 .faq-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: var(--space-16);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease-out forwards;
@@ -1557,7 +1370,7 @@ body {
     font-weight: 800;
     line-height: 1.15;
     color: white;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-4);
     letter-spacing: -0.02em;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1574,7 +1387,7 @@ body {
 .faq-accordion {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
 }
 
 .faq-item {
@@ -1610,7 +1423,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: var(--space-6);
     padding: 24px 28px;
     background: none;
     border: none;
@@ -1738,7 +1551,7 @@ body {
 @media (max-width: 1200px) {
     .dashboard-showcase {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: var(--space-6);
     }
 
     .hero-header h1 {
@@ -1751,7 +1564,7 @@ body {
 
     .metrics-row {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: var(--space-5);
     }
 
     .metric-divider {
@@ -1763,14 +1576,14 @@ body {
         height: auto;
     }
 
-    .testimonial-card {
+    .interactive-cta-card {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 40px;
         padding: 44px;
     }
 
-    .preview-row {
-        grid-template-columns: repeat(4, 1fr);
+    .chat-placeholder {
+        min-height: 220px;
     }
 }
 
@@ -1797,7 +1610,7 @@ body {
 
     .advantages-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: var(--space-5);
     }
 
     .card-header {
@@ -1854,30 +1667,63 @@ body {
         padding: 60px 20px;
     }
 
-    .testimonial-card {
+    .interactive-cta-card {
         padding: 32px 24px;
-        gap: 36px;
+        gap: 32px;
     }
 
-    .chat-window {
-        padding: 20px;
+    .chat-placeholder {
+        min-height: 200px;
+        padding: 32px 20px;
     }
 
-    .preview-row {
-        grid-template-columns: repeat(2, 1fr);
+    .cta-headline {
+        font-size: 26px;
     }
 
-    .testimonial-quote {
-        font-size: 22px;
+    .cta-subheadline {
+        font-size: 15px;
     }
 
-    .testimonial-metrics {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    .example-showcase {
+        padding: 12px 16px;
+        margin: 12px 0 8px 0;
     }
 
-    .metric-value {
-        font-size: 40px;
+    .example-intro {
+        font-size: 15px;
+        margin: 0 0 10px 0;
+    }
+
+    .example-label {
+        font-size: 14px;
+        margin: 0 0 6px 0;
+    }
+
+    .example-list {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .example-list li {
+        font-size: 14px;
+    }
+
+    .example-insight {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .chat-pointer {
+        padding: 16px 20px;
+    }
+
+    .pointer-arrow {
+        font-size: 28px;
+    }
+
+    .pointer-main {
+        font-size: 15px;
     }
 
     .faq-section {
@@ -1894,7 +1740,7 @@ body {
 
     .faq-question {
         padding: 20px 20px;
-        gap: 16px;
+        gap: var(--space-4);
     }
 
     .question-text {
@@ -1915,7 +1761,7 @@ body {
             <!-- Header -->
             <div class="hero-header">
                 <h1>Анализ продаж за 30 секунд вместо 3 часов в Excel</h1>
-                <p>Анализирует все SKU за минуту. Говорит конкретно: какую цену ставить, где урезать рекламу, что выводить из ассортимента</p>
+                <p>Персональный ИИ-аналитик для селлеров. Анализирует магазин за минуту — даёт готовые решения по ценам, рекламе, ассортименту</p>
             </div>
 
             <!-- Dashboard Showcase -->
@@ -1998,11 +1844,9 @@ body {
                         </div>
                         <div class="chat-messages">
                             <div class="chat-message user">
-                                Какие товары съедают мою прибыль?
+                                Что сейчас растёт в электронике?
                             </div>
-                            <div class="chat-message agent">
-                                <span id="typed-text"></span><span class="typing-cursor"></span>
-                            </div>
+                            <div class="chat-message agent"><span id="typed-text"></span><span class="typing-cursor"></span></div>
                         </div>
                     </div>
                     <a href="#waitlist" class="cta-button">
@@ -2204,175 +2048,47 @@ body {
     <!-- Testimonial Section -->
     <section class="testimonial-section" id="testimonial">
         <div class="section-container">
-            <!-- Single Unified Card -->
-            <div class="testimonial-card">
+            <!-- Interactive CTA Card -->
+            <div class="interactive-cta-card">
 
-                <!-- Left Side: Chat + Preview Buttons -->
-                <div class="card-left">
-                    <!-- Chat Window -->
-                    <div class="chat-window">
-                        <!-- Conversation -->
-                        <div class="chat-conversation">
-                            <div class="message user">
-                                Какие товары съедают мою маржу?
-                            </div>
-
-                            <div class="message agent">
-                                <div class="agent-intro">Нашёл 3 товара с критически низкой маржой:</div>
-
-                                <ul class="findings-list">
-                                    <li class="finding-item">
-                                        <div class="finding-icon">
-                                            <svg viewBox="0 0 24 24">
-                                                <rect x="2" y="2" width="20" height="20" rx="2"/>
-                                                <path d="M7 2v20"/>
-                                                <path d="M17 2v20"/>
-                                                <path d="M2 12h20"/>
-                                                <path d="M2 7h5"/>
-                                                <path d="M2 17h5"/>
-                                                <path d="M17 17h5"/>
-                                                <path d="M17 7h5"/>
-                                            </svg>
-                                        </div>
-                                        <div class="finding-content">
-                                            <div class="finding-title">Чехол iPhone 14 Pro (арт. 8847291)</div>
-                                            <div class="finding-details">Маржа 3.2% • 18% оборотки • Убыток ₽42K/мес</div>
-                                        </div>
-                                    </li>
-
-                                    <li class="finding-item">
-                                        <div class="finding-icon">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
-                                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
-                                                <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="finding-content">
-                                            <div class="finding-title">Наушники TWS Basic (арт. 7729103)</div>
-                                            <div class="finding-details">Маржа 4.8% • 22% оборотки • Убыток ₽58K/мес</div>
-                                        </div>
-                                    </li>
-
-                                    <li class="finding-item">
-                                        <div class="finding-icon">
-                                            <svg viewBox="0 0 24 24">
-                                                <circle cx="12" cy="12" r="7"/>
-                                                <polyline points="12 9 12 12 13.5 13.5"/>
-                                                <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"/>
-                                            </svg>
-                                        </div>
-                                        <div class="finding-content">
-                                            <div class="finding-title">Смарт-часы M6 Pro (арт. 9103847)</div>
-                                            <div class="finding-details">Маржа 2.1% • 15% оборотки • Убыток ₽35K/мес</div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <div class="agent-recommendation">
-                                    <div class="recommendation-icon">
-                                        <svg viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="10"/>
-                                            <path d="M12 16v-4"/>
-                                            <path d="M12 8h.01"/>
-                                        </svg>
-                                    </div>
-                                    <span>Рекомендация: Вывести из ассортимента или поднять цены на 18-25%. Освободишь ₽240K оборотных.</span>
-                                </div>
-                            </div>
+                <!-- Left Side: Chat Placeholder (40%) -->
+                <div class="chat-placeholder">
+                    <div class="placeholder-content">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                <path d="M8 10h.01"/>
+                                <path d="M12 10h.01"/>
+                                <path d="M16 10h.01"/>
+                            </svg>
                         </div>
-                    </div>
-
-                    <!-- Compact Preview Row -->
-                    <div class="preview-row">
-                        <div class="preview-item active">
-                            <div class="preview-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <line x1="12" y1="1" x2="12" y2="23"/>
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                                </svg>
-                            </div>
-                            <div class="preview-label">Анализ маржи</div>
-                        </div>
-
-                        <div class="preview-item">
-                            <div class="preview-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                    <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
-                                    <polyline points="7.5 19.79 7.5 14.6 3 12"/>
-                                    <polyline points="21 12 16.5 14.6 16.5 19.79"/>
-                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                                    <line x1="12" y1="22.08" x2="12" y2="12"/>
-                                </svg>
-                            </div>
-                            <div class="preview-label">Прогноз остатков</div>
-                        </div>
-
-                        <div class="preview-item">
-                            <div class="preview-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                                </svg>
-                            </div>
-                            <div class="preview-label">Оптимизация рекламы</div>
-                        </div>
-
-                        <div class="preview-item">
-                            <div class="preview-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
-                                </svg>
-                            </div>
-                            <div class="preview-label">Поиск ниш</div>
-                        </div>
+                        <p class="placeholder-text">Интерактивный чат</p>
                     </div>
                 </div>
 
-                <!-- Right Side: Testimonial -->
-                <div class="card-right">
-                    <!-- Author -->
-                    <div class="testimonial-author">
-                        <div class="author-avatar">МК</div>
-                        <div class="author-details">
-                            <div class="author-name">Марина Королёва</div>
-                            <div class="author-meta">Детские товары • 3 года на Ozon</div>
-                        </div>
+                <!-- Right Side: CTA Content (60%) -->
+                <div class="cta-content">
+                    <!-- Headline -->
+                    <h2 class="cta-headline">Проверь ИИ на реальных данных Ozon и Wildberries</h2>
+
+                    <!-- Subheadline -->
+                    <p class="cta-subheadline">Узнай маржу, конкурентов и возможности ниши — без подключения магазина</p>
+
+                    <!-- Example Analysis Showcase -->
+                    <div class="example-showcase">
+                        <p class="example-intro">Анализ рынка: Powerbank 20000mAh</p>
+
+                        <p class="example-insight">Инсайт: Средняя маржа 18%, но топ-10 зарабатывают 22% за счёт комплектации с кабелем</p>
                     </div>
 
-                    <!-- Quote -->
-                    <blockquote class="testimonial-quote">
-                        За неделю агент нашёл то, что я искала 3 месяца в Excel. Думала знаю свой ассортимент наизусть
-                    </blockquote>
-
-                    <!-- Additional Details -->
-                    <p class="testimonial-details">
-                        Раньше тратила 4 часа каждую неделю на анализ остатков и продаж в таблицах. Теперь задаю вопрос агенту — получаю готовые рекомендации с конкретными цифрами за 30 секунд.
-                    </p>
-
-                    <!-- Metrics -->
-                    <div class="testimonial-metrics">
-                        <div class="metric">
-                            <div class="metric-value">+₽1.2M</div>
-                            <div class="metric-label">Дополнительной выручки за 4 месяца</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">-85%</div>
-                            <div class="metric-label">Времени на анализ продаж и остатков</div>
+                    <!-- Visual Pointer to Chat -->
+                    <div class="chat-pointer">
+                        <div class="pointer-arrow">←</div>
+                        <div class="pointer-text">
+                            <span class="pointer-main">Проверь любую категорию на тренды и возможности</span>
+                            <span class="pointer-sub">Бесплатно</span>
                         </div>
                     </div>
-
-                    <!-- CTA -->
-                    <a href="#" class="cta-button">
-                        Попробовать агента
-                        <span class="cta-arrow">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        </span>
-                    </a>
                 </div>
 
             </div>
@@ -2419,7 +2135,13 @@ body {
                     </button>
                     <div class="faq-answer">
                         <div class="answer-content">
-                            Начать можно бесплатно без подключения API — агент анализирует общие данные маркетплейсов и показывает растущие ниши. Для персонального анализа своего магазина — ₽2,990/мес. Первые 7 дней бесплатно, отменить можно в любой момент.
+                            <strong>Два способа начать:</strong><br><br>
+
+                            <strong>Без API</strong> (общая аналитика рынка):<br>
+                            Бесплатно 7 дней, затем ₽2,990/мес. Агент анализирует тренды маркетплейсов, растущие ниши, конкурентов.<br><br>
+
+                            <strong>С подключением API</strong> (персональный анализ):<br>
+                            ₽2,990/мес, первые 7 дней бесплатно. Полный анализ твоего магазина с конкретными рекомендациями. Отменить можно в любой момент.
                         </div>
                     </div>
                 </div>
@@ -2498,7 +2220,7 @@ body {
 
     <script>
         // Typing animation for hero chat
-        const text = 'Нашел 3 SKU с маржой <5%: артикулы 111, 222, 333. Они забирают 40% оборотки но дают только 8% прибыли. Показать детали?';
+        const text = 'Топ-3 за последний месяц:\n• Беспроводные наушники TWS\n• Powerbank 20000mAh\n• Умные часы до ₽5000';
         const typedElement = document.getElementById('typed-text');
         let i = 0;
 
